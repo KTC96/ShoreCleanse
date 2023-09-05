@@ -9,6 +9,12 @@
 </head>
 
 <body>
+
+    <ul>
+        <li><a href="{% url 'index' %}">Index</a></li>
+        <li><a href="{% url 'about' %}">About Shore Cleanse</a></li>
+    </ul>
+
     {% block content %}
     {% endblock %}
 </body>
