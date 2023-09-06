@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.author.username }} - {{ post.created_at }}</p>
+  <p>{{ post.content | safe }}</p>
+  <a href="{% url 'post_list' %}">Back to Blog</a>
+  <a href="{% url 'post_edit' post.pk %}">Edit Post</a>
+  <a href="{% url 'post_delete' post.pk %}">Delete Post</a>
+{% endblock %}
