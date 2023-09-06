@@ -13,13 +13,14 @@
     <ul>
         <li><a href="{% url 'index' %}">Index</a></li>
         <li><a href="{% url 'about' %}">About Shore Cleanse</a></li>
+        <li><a href="{% url 'all_events' %}">View all events</a></li>
 
         {% if request.user.is_staff %}
-    	<p>Hello {{ request.user.username }}</p>
-    	<li><a href="{% url 'logout' %}">Log out</a></li>
-    	{% else %}
-    	<li><a href="{% url 'login' %}">Log in</a></li>
-    	{% endif %}
+        <p>Hello {{ request.user.username }}</p>
+        <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Log in</a></li>
+        {% endif %}
 
     </ul>
 
