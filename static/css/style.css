@@ -54,6 +54,10 @@ body {
     color: white;
 }
 
+:root {
+    --bs-link-color: black;
+    --bs-link-hover-color: whitesmoke;
+}
 
 .bg-color {
     background-color: #007ACC;
@@ -61,8 +65,18 @@ body {
 
 .navbar {
     --bs-navbar-color: whitesmoke;
+    min-height: 100%;
+    padding: 0;
 }
 
+.dropdown-item {
+    background-color: #007ACC;
+    color: whitesmoke;
+}
+
+.dropdown-menu {
+    --bs-dropdown-padding-y: 0rem;
+}
 
 /* ------------------------------------Mission statement */
 
@@ -102,6 +116,35 @@ body {
 .locations a {
     text-decoration: none;
 }
+
+.col-md-4 {
+    position: relative;
+}
+
+.location {
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.col-md-4:hover .opaque-overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
 
 /* ------------------------------------Footer */
 
