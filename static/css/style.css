@@ -1,0 +1,12 @@
+.main-heading-container {
+    height: 100vh;
+    background-image: url('../uploads/main.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
