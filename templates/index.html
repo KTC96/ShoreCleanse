@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<!-- Main heading -->
 <div class="container-fluid main-heading-container">
-    <!-- Main heading -->
     <div class="opaque-overlay">&nbsp;</div>
     <div class="row">
         <div class="col-12">
@@ -19,67 +18,67 @@
             </section>
         </div>
     </div>
-    <!-- /.Main heading -->
 </div>
-<div class="container-wrapper">
+<!-- /.Main heading -->
+
+<!-- Mission statement -->
+<section class="mission">
     <div class="container mission-container content-container">
-        <section class="quotes">
-            <div class="row">
-                <div class="col-12 page-header text-center">
-                    <h2>Mission Statement</h2>
-                    <hr class="block-divider block-divider--short" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt at nunc in cursus. Donec
-                        nec felis vitae velit tempus suscipit eget non orci. Praesent magna odio, auctor cursus ante et,
-                        pellentesque elementum lectus. Ut malesuada ut dolor nec auctor. Phasellus porttitor suscipit
-                        ante, at laoreet lacus consequat non. Integer pharetra augue libero, sed tincidunt odio luctus
-                        et. In at hendrerit velit. Sed pellentesque eros at ligula vehicula egestas. Suspendisse et
-                        efficitur nisl. In maximus sollicitudin dolor, non placerat felis bibendum et.
+        <div class="row">
+            <div class="col-12 page-header text-center">
+                <h2>Mission Statement</h2>
+                <hr class="block-divider block-divider--short" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt at nunc in cursus. Donec
+                    nec felis vitae velit tempus suscipit eget non orci. Praesent magna odio, auctor cursus ante et,
+                    pellentesque elementum lectus. Ut malesuada ut dolor nec auctor. Phasellus porttitor suscipit
+                    ante, at laoreet lacus consequat non. Integer pharetra augue libero, sed tincidunt odio luctus
+                    et. In at hendrerit velit. Sed pellentesque eros at ligula vehicula egestas. Suspendisse et
+                    efficitur nisl. In maximus sollicitudin dolor, non placerat felis bibendum et.
 
-                        Cras accumsan ipsum a orci convallis aliquam. Morbi a tellus tellus. Donec id ante odio. Nulla
-                        quis feugiat purus, a bibendum turpis. Donec sit amet fermentum eros. Phasellus convallis erat
-                        eu suscipit efficitur. Nulla et laoreet urna. Quisque egestas nisi non massa sodales blandit.
-                        Etiam ullamcorper tortor eu rhoncus faucibus. Maecenas nec efficitur nibh. Nullam vel luctus
-                        erat, ac lobortis ligula.
-                    </p>
-                </div>
+                    Cras accumsan ipsum a orci convallis aliquam. Morbi a tellus tellus. Donec id ante odio. Nulla
+                    quis feugiat purus, a bibendum turpis. Donec sit amet fermentum eros. Phasellus convallis erat
+                    eu suscipit efficitur. Nulla et laoreet urna. Quisque egestas nisi non massa sodales blandit.
+                    Etiam ullamcorper tortor eu rhoncus faucibus. Maecenas nec efficitur nibh. Nullam vel luctus
+                    erat, ac lobortis ligula.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <!-- Locations -->
-                <div class="container-wrapper">
-                    <div class="container locations-container content-container">
-                        <section class="features">
-                            <div class="row">
-                                <div class="col-12 page-header">
-                                    <h2 class="text-center">Locations</h2>
-                                    <hr />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="location">
-                                        <a href="#" class="location-1"></a>
-                                        <h3>
-                                            Location 1
-                                        </h3>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="location">
-                                        <h3>
-                                            Location 2
-                                        </h3>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="location">
-                                        <h3>
-                                            Location 3
-                                        </h3>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        {% endblock %}
+<!-- Locations -->
+<section class="features">
+    <div class="container locations-container content-container">
+        <div class="row">
+            <div class="col-12 page-header">
+                <h2 class="text-center">Locations</h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="location location-1 rounded-3">
+                        <h3>Location 1</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="location location-2 rounded-3">
+                        <h3>Location 2</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="#">
+                    <div class="location location-3 rounded-3">
+                        <h3>Location 3</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

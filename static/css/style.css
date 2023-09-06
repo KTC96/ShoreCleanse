@@ -10,3 +10,62 @@
 
     position: relative;
 }
+
+
+.location {
+    min-height: 300px;
+}
+
+.location-1 {
+    background-image: url('../uploads/bray.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-2 {
+    background-image: url('../uploads/strand.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-3 {
+    background-image: url('../uploads/location3.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------------Footer */
+
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+}
+
+.footer-icon {
+    font-size: 26px;
+    color: #e67e22;
+}
+
+.developer-image {
+    height: 100px;
+    width: 100px;
+
+}
