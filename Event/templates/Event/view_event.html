@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ event.title }}</h1>
+
+<img src="{{event.image}}" alt="Italian Trulli">
+
+<p>{{ event.notes }}</p>
+
+<p>Location: {{ event.location }}</p>
+
+<p>Attendees: {{ event.attendees }}</p>
+
+<a href="{% url 'index' %}">back to main page</a>
+
+{% endblock %}
