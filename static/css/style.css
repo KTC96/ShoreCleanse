@@ -1,3 +1,18 @@
+/* ------------------------------------Global */
+p {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* ------------------------------------Headings */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
 .main-heading-container {
     height: 100vh;
     background-image: url('../uploads/main.jpg');
@@ -11,14 +26,36 @@
     position: relative;
 }
 
-.bg-color {
-    background-image: linear-gradient(#007ACC, #7B8FD3);
+.mission-heading,
+.locations-heading {
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
-
 
 .location {
     min-height: 300px;
 }
+
+/* ------------------------------------Colour */
+body {
+    color: whitesmoke;
+}
+
+.text-background-blue {
+    background-color: rgba(0, 122, 204, 0.7);
+    padding: 20px;
+    color: white;
+}
+
+.bg-color {
+    background-image: linear-gradient(#007ACC, #7B8FD3);
+}
+
+/* ------------------------------------Mission statement */
+
+
+/* ------------------------------------Locations */
 
 .location-1 {
     background-image: url('../uploads/bray.png');
@@ -50,7 +87,7 @@
     margin-bottom: 40px;
 }
 
-a {
+.locations a {
     text-decoration: none;
 }
 
