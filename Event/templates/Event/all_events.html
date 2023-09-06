@@ -6,7 +6,7 @@
 
 {% for Event in eventList %}
 <p>
-	<a href="#">{{ Event.title }}</a>
+	<a href="{% url 'view_event' id=Event.id %}">{{ Event.title }}</a>
 </p>
 {% endfor %}
 

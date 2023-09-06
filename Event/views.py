@@ -9,5 +9,5 @@ def all_events(request):
 
 
 def view_event(request, id):
-    event = event.objects.get(id=id)
+    event = Event.objects.get(id=id)
     return render(request, 'Event/view_event.html', {'event': event})
