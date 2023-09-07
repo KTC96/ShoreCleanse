@@ -151,7 +151,8 @@ body {
 
 footer {
     color: #fafafa;
-    min-height: 120px;
+    min-height: 80px;
+
 }
 
 .footer-icon {
@@ -165,12 +166,29 @@ footer {
 
 }
 
-.developer-images-container {
+/* Style for the container that holds developer images and address */
+.developer-and-address-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    /* Center vertically */
+    text-align: center;
 }
 
+/* Style for the address section */
+.address {
+    text-align: left;
+    margin: 10px;
+}
+
+/* Style for the developer images container */
+.developer-images-container {
+    display: flex;
+    align-items: center;
+    /* Center developer images vertically */
+}
+
+/* Style for each developer's section */
 .developer {
     text-align: center;
     margin: 10px;
