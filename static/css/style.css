@@ -26,22 +26,45 @@ p {
     transform: translateX(0);
 }
 
-.location-animation:nth-child(1) {
-    transition-delay: 200ms;
-}
-
-.location-animation:nth-child(2) {
-    transition-delay: 400ms;
-}
-
-.location-animation:nth-child(3) {
-    transition-delay: 600ms;
-}
-
 .mission-animation:nth-child(3) {
     transition-delay: 200ms;
 }
 
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
 
 
 
@@ -168,35 +191,6 @@ body {
 
 /* ------------------------------------Locations */
 
-.location-1 {
-    background-image: url('../uploads/bray.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.location-2 {
-    background-image: url('../uploads/strand.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.location-3 {
-    background-image: url('../uploads/location3.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
 
 .locations a {
     text-decoration: none;
@@ -221,7 +215,7 @@ body {
     transition: opacity 0.5s;
 }
 
-.col-md-4:hover .opaque-overlay {
+.col-md-3:hover .opaque-overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0);
 }
