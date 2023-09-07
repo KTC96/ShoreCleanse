@@ -150,7 +150,7 @@ body {
 
 .aims-subheading {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .main-mission-statement {
@@ -173,6 +173,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.mission-aims>p {
+    margin-bottom: 20px;
+    font-size: 20px;
 
 }
 
