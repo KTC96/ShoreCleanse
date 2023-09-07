@@ -26,9 +26,7 @@ p {
     transform: translateX(0);
 }
 
-.location-animation:nth-child(1) {
-    transition-delay: 200ms;
-}
+.location-animation:nth-child(1) {}
 
 .location-animation:nth-child(2) {
     transition-delay: 400ms;
@@ -37,6 +35,11 @@ p {
 .location-animation:nth-child(3) {
     transition-delay: 600ms;
 }
+
+.mission-animation:nth-child(3) {
+    transition-delay: 200ms;
+}
+
 
 
 
@@ -110,6 +113,7 @@ body {
 
 /* ------------------------------------Mission statement */
 
+
 .mission-container {
     font-size: 18px;
 }
@@ -127,6 +131,36 @@ body {
 .main-mission-statement {
     font-size: 20px;
     font-weight: 900;
+}
+
+.mission-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.mission-aims {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mission-heading {
+    margin-top: 100px;
+}
+
+.locations {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
