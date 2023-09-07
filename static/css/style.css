@@ -184,6 +184,7 @@ footer {
 
 }
 
+
 .developer-and-address-container {
     display: flex;
     justify-content: space-between;
@@ -200,6 +201,7 @@ footer {
     display: flex;
     align-items: center;
 }
+
 
 .developer {
     text-align: center;
