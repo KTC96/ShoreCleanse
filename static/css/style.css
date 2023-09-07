@@ -137,6 +137,14 @@ body {
     --bs-dropdown-padding-y: 0rem;
 }
 
+/* ------------------------------------Navbar */
+.user-name {
+    margin: 0;
+}
+
+.active {
+    color: black;
+}
 /* ------------------------------------Mission statement */
 
 
@@ -467,8 +475,6 @@ footer {
 .blog-post-background {
     background-color: #007ACC;
 }
-
-
 
 .blog-format {
     padding: 50px;
