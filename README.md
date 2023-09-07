@@ -26,8 +26,8 @@ Following the criteria set out by the hackathon facilitators and incorporating t
 
 Some of the most important factors of the project include:
 
-  - Organizing a group of <strike>weirdos </strike>strangers with varying abilities to join together to create a functioning site with both frontend and backend from their, ehm, backends.
-  - The languages used will be new to some members of the team (and less colorfol for others), but will be a great learning curve for all.
+  - Organizing a group of <strike>weirdos </strike>strangers with varying abilities to join together to create a functioning site in a limited time frame with both frontend and backend from their, ehm, backends.
+  - The languages used will be new to some members of the team (and less colorful for others), but will be a great learning curve for all.
   - Working together and seeing all members differing visions coming together in symphony, much like the frog chorus of yore.
 
 
@@ -96,6 +96,10 @@ Some of the most important factors of the project include:
 
 
 ## Credits
+ 
+ Credit for blog post structure: [Bootdey](https://www.bootdey.com/snippets/view/Blog-Detail-App#html)
+ 
+ 
  **Thank you to all the team members for being sound. Oh, and for all the hard work and cooperation.**
 
   
