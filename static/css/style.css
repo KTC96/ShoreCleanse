@@ -188,6 +188,14 @@ body {
     align-items: center;
 }
 
+.mission {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ------------------------------------Locations */
 
