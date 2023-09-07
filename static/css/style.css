@@ -463,7 +463,6 @@ footer {
     color: rgb(100, 98, 98);
     border-color: rgb(100, 98, 98);
 }
-
 /*-----------------------Blog page  */
 .blog-post-background {
     background-color: #007ACC;
@@ -499,6 +498,11 @@ footer {
     position: relative;
 }
 
+/* ---------- Google Maps---------------*/
+#gmp-map {
+    height: 500px;
+    width: 500px;
+  }
 
 
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
