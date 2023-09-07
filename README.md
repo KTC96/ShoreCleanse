@@ -3,10 +3,8 @@
 
 </h1>
 
-kim
-kyle
 
-![Summer of Code Banner](https://res.cloudinary.com/djdefbnij/image/upload/v1693903105/Hackathons/Untitled_design_2_1_gzwakq.png)
+![Summer of Code Banner](static/uploads/logo.png)
 
 
 
@@ -19,7 +17,7 @@ The project is deployed and can be accessed at [http://your-deployed-link.com](h
 
 # ABOUT SUBMISSION
 ## Intro
-One or two paragraphs providing an overview of our project
+ShoreCleanse is a site designed to help users find local beach clean up events in their area. It allows users to create profiles to connect with likeminded individuals for environmental events, document their trash collection, and provides updated statistics for 
 
 ## Goal
 The goal section provides a concise summary of the main objective or purpose of the project or software described in this README. It addresses the following aspects:

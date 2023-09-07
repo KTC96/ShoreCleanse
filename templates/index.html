@@ -1,7 +1,90 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- Main heading -->
+<div class="container-fluid main-heading-container">
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <div class="text-background-blue">
+                    <h1 class="jumbotron-header">
+                        Make Waves for a Cleaner coast!
+                    </h1>
+                    <hr class="block-divider" />
+                    <p class="lead">
+                        Last month our users collected enough rubbish to pave <strong>0.5 miles</strong> of sustainable
+                        roads.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- /.Main heading -->
 
-<h1>Index page</h1>
+<!-- Mission statement -->
+<div class="bg-color-gradient">
+    <section class="mission">
+        <div class="container mission-container content-container">
+            <div class="row">
+                <div class="col-12 page-header text-center">
+                    <h2 class="mission-heading"><i class="fa-solid fa-earth-europe"></i> Mission Statement</h2>
+                    <hr class="block-divider block-divider--short" />
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt at nunc in cursus. Donec
+                        nec felis vitae velit tempus suscipit eget non orci. Praesent magna odio, auctor cursus ante et,
+                        pellentesque elementum lectus. Ut malesuada ut dolor nec auctor. Phasellus porttitor suscipit
+                        ante, at laoreet lacus consequat non. Integer pharetra augue libero, sed tincidunt odio luctus
+                        et. In at hendrerit velit. Sed pellentesque eros at ligula vehicula egestas. Suspendisse et
+                        efficitur nisl. In maximus sollicitudin dolor, non placerat felis bibendum et.
 
+                        Cras accumsan ipsum a orci convallis aliquam. Morbi a tellus tellus. Donec id ante odio. Nulla
+                        quis feugiat purus, a bibendum turpis. Donec sit amet fermentum eros. Phasellus convallis erat
+                        eu suscipit efficitur. Nulla et laoreet urna. Quisque egestas nisi non massa sodales blandit.
+                        Etiam ullamcorper tortor eu rhoncus faucibus. Maecenas nec efficitur nibh. Nullam vel luctus
+                        erat, ac lobortis ligula.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations">
+        <div class="container locations-container content-container">
+            <div class="row">
+                <div class="col-12 page-header">
+                    <h2 class="text-center locations-heading"> <i class="fa-solid fa-location-dot"></i> Locations</h2>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/view_event/6">
+                        <div class="location location-1 rounded-3">
+                            <h3 class="bold-text">Bray</h3>
+                            <div class="opaque-overlay rounded-3"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/view_event/7">
+                        <div class="location location-2 rounded-3">
+                            <h3 class="bold-text">Strand</h3>
+                            <div class="opaque-overlay rounded-3"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#">
+                        <div class="location location-3 rounded-3">
+                            <h3 class="bold-text">Location 3</h3>
+                            <div class="opaque-overlay rounded-3"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 {% endblock %}

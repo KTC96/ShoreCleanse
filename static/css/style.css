@@ -1,0 +1,166 @@
+/* ------------------------------------Global */
+p {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------Headings */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.main-heading-container {
+    height: 100vh;
+    background-image: url('../uploads/main.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mission-heading,
+.locations-heading {
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.location {
+    min-height: 300px;
+}
+
+/* ------------------------------------Colour */
+body {
+    color: whitesmoke;
+    background-image: linear-gradient(#007ACC, #7B8FD3);
+}
+
+.text-background-blue {
+    background-color: rgba(0, 122, 204, 0.7);
+    padding: 20px;
+    color: white;
+}
+
+:root {
+    --bs-link-color: black;
+    --bs-link-hover-color: whitesmoke;
+}
+
+.bg-color {
+    background-color: #007ACC;
+}
+
+.navbar {
+    --bs-navbar-color: whitesmoke;
+    min-height: 100%;
+    padding: 0;
+}
+
+.dropdown-item {
+    background-color: #007ACC;
+    color: whitesmoke;
+}
+
+.dropdown-menu {
+    --bs-dropdown-padding-y: 0rem;
+}
+
+/* ------------------------------------Mission statement */
+
+
+/* ------------------------------------Locations */
+
+.location-1 {
+    background-image: url('../uploads/bray.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-2 {
+    background-image: url('../uploads/strand.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.location-3 {
+    background-image: url('../uploads/location3.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.locations a {
+    text-decoration: none;
+}
+
+.col-md-4 {
+    position: relative;
+}
+
+.location {
+    position: relative;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.col-md-4:hover .opaque-overlay {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
+
+/* ------------------------------------Footer */
+
+
+footer {
+    color: #fafafa;
+    min-height: 120px;
+}
+
+.footer-icon {
+    font-size: 26px;
+    color: #e67e22;
+}
+
+.developer-image {
+    height: 100px;
+    width: 100px;
+
+}
