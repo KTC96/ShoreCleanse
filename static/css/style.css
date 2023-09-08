@@ -590,9 +590,35 @@ footer {
 }
 
 .about-section {
+    height: 100%;
     display: flex;
     justify-content: center;
+
+
 }
+
+.about-heading-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+
+}
+
+.about-text {
+    color: #007ACC;
+}
+
+.about-card-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-style {
+    margin: 10px;
+
+}
+
 
 
 
