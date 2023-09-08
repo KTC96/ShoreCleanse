@@ -19,6 +19,18 @@
         defer></script>
     <script src="{% static 'js/maps.js' %}"></script>
     <title>Shore Cleanse</title>
+    <style>
+        .blog-heading-container {
+            height: 100vh;
+            background-image: url('{{ post.image.url }}');
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        </style>
 </head>
 
 <body>
@@ -47,7 +59,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/blog/' %}active{% endif %}"
-                            href="{% url 'post_list' %}">Blog</a>
+                            href="{% url 'all_posts' %}">Blog</a>
                     </li>
 
                     <li class="nav-item dropdown">
