@@ -1,6 +1,7 @@
 /* ------------------------------------Global */
 p {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
 }
 
 .logo {
@@ -462,6 +463,47 @@ footer {
     color: rgb(100, 98, 98);
     border-color: rgb(100, 98, 98);
 }
+/*-----------------------Blog page  */
+.blog-post-background {
+    background-color: #007ACC;
+}
+
+
+
+.blog-format {
+    padding: 50px;
+}
+
+.blog-page {
+    padding: 50px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    width: 100%;
+}
+
+.blog-heading-container {
+    height: 100vh;
+    background-image: url('../uploads/beach_cleanup.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* ---------- Google Maps---------------*/
+#gmp-map {
+    height: 500px;
+    width: 500px;
+  }
+
 
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
 @media (max-width: 768px) {

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
@@ -12,6 +11,12 @@
 <p>Location: {{ event.location }}</p>
 
 <p>Attendees: {{ event.attendees }}</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <button type="submit" name="attending" style="border:none;background:none;">
+        <i class="fa-solid fa-circle-check"></i></button>
+</form>
 
 <a href="{% url 'index' %}">back to main page</a>
 
