@@ -2,9 +2,8 @@
 {% load static %}
 {% block content %}
 
-<h1>All Events</h1>
-
-<div class="row">
+<h1 class="text-center">All Events</h1>
+<div class="row d-flex justify-content-around container-fluid my-5 mx-0">
 	{% for Event in eventList %}
 		<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 			<div class="card card-color h-100 border-0 mx-5 my-3">
@@ -23,7 +22,11 @@
 				</div>
 				</a>
 			</div>
+		  </div>
 		</div>
+		</a>
+	  </div>
+	</div>
 		{% if forloop.counter|divisibleby:1 %}
 			<div class="col-12 d-sm-none mb-5">
 				<hr>
@@ -45,6 +48,6 @@
 			</div>
 		{% endif %}
 	{% endfor %}
-
+	</div>
 {% endblock %}
 
