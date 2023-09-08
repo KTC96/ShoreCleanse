@@ -551,6 +551,26 @@ footer {
     padding: 10px;
 }
 
+/*-----------------------Log in page  */
+
+
+
+.log-in-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../uploads/login-beach.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.log-in h1 {
+    padding: 50px;
+}
+
 
 
 /* ---------- Google Maps---------------*/
