@@ -619,6 +619,24 @@ footer {
 
 }
 
+.card-img-top {
+    height: 100%;
+    width: 100%;
+}
+
+.about-heading-container2 {
+    height: 100vh;
+    background-image: url('../uploads/polluted-beach.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: center bottom;
+
+}
+
 
 
 
