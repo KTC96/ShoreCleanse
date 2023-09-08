@@ -507,12 +507,6 @@ footer {
     width: 100%;
 }
 
-.img-size {
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
-}
-
 .blog-heading-container {
     height: 100vh;
     background-image: url('../uploads/beach_cleanup.jpg');
@@ -633,7 +627,8 @@ footer {
 }
 
 .card-img-top {
-    height: 100%;
+    object-fit: cover;
+    height: 250px;
     width: 100%;
 }
 
