@@ -145,6 +145,7 @@ body {
 .active {
     color: black;
 }
+
 /* ------------------------------------Mission statement */
 
 
@@ -471,6 +472,7 @@ footer {
     color: rgb(100, 98, 98);
     border-color: rgb(100, 98, 98);
 }
+
 /*-----------------------Blog page  */
 .blog-post-background {
     background-color: #007ACC;
@@ -504,11 +506,54 @@ footer {
     position: relative;
 }
 
+.btn-join {
+    background-color: white;
+    border-color: white;
+    --bs-btn-hover-border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007ACC;
+}
+
+.btn-submit {
+    background-color: #007ACC;
+    border-color: white;
+    --bs-btn-hover-border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+
+.blog-email {
+    color: #007ACC;
+    margin-top: 10px;
+}
+
+.blog-profile-image {
+    padding-top: 15px;
+}
+
+
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.text-box {
+    padding: 10px;
+}
+
+
+
 /* ---------- Google Maps---------------*/
 #gmp-map {
     height: 500px;
     width: 500px;
-  }
+}
 
 
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
