@@ -11,10 +11,14 @@ def all_events(request):
 
 def view_event(request, id):
     event = Event.objects.get(id=id)
-    print(event.names)
-    jsonData = event.names
-    jsonData["men"].append("qweqwe")
+
+    #if request.user.is_authenticated():
+    username = request.user.username
+
+    attendeeList = event.names
+
     if 'attending' in request.POST:
+        attendeeList["names"].append(username)
         event.attendees += 1
         event.save()
     return render(request, 'Event/view_event.html', {'event': event})
