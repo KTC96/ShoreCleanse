@@ -576,6 +576,24 @@ footer {
     padding: 50px;
 }
 
+/*-----------------------About us  */
+
+.about-heading-container {
+    height: 100vh;
+    background-image: url('../uploads/aboutus-image.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* ---------- Google Maps---------------*/
