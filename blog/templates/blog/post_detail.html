@@ -3,10 +3,35 @@
 
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
-  <p>{{ post.author.username }} - {{ post.created_at }}</p>
-  <p>{{ post.content | safe }}</p>
-  <a href="{% url 'post_list' %}">Back to Blog</a>
-  <a href="{% url 'post_edit' post.pk %}">Edit Post</a>
-  <a href="{% url 'post_delete' post.pk %}">Delete Post</a>
+<div class="container-fluid blog-heading-container">
+  <div class="row">
+      <div class="col-12">
+          <section class="callout jumbotron text-center">
+              <div class="text-background-blue">
+                  <h1 class="jumbotron-header">
+                    {{ post.title }}
+                  </h1>
+
+              </div>
+          </section>
+      </div>
+  </div>
+</div>
+<div class="card single_post">
+  <div class="body blog-post-background">
+      <small class="blog-format">{{ post.author.username }}</small>
+      <div class="blog-format  text-center ">
+        {{ post.content | safe }}
+        <br>
+        <div class="d-flex justify-content-center"> 
+          <button class="btn btn-lg btn--cta btn-join " href="#">
+                Join Us
+            </button>
+        </div>
+      </div>
+  </div>
+</div>
+
+  
+  <a href="{% url 'all_posts' %}">Back to Blog</a>
 {% endblock %}
