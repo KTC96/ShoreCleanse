@@ -14,8 +14,21 @@
 
 <form action="" method="post">
     {% csrf_token %}
+
+    <!-- Renders signup button on if the user is not signed up to the cleanup event
+    renders the unsibscribe button if the user wishes to remove themselves from the cleanup event 
+    passes 'attending' or 'not_attending' to the view -->
+
+    {% if signedUp %}
+    <h1>signed up, unsubscribe</h1>
+    <button type="submit" name="not_attending" style="border:none;background:none;">
+        <i class="fa-solid fa-xmark"></i></button>
+    {% else %}
+    <h1>not signed up, subscribe</h1>
     <button type="submit" name="attending" style="border:none;background:none;">
         <i class="fa-solid fa-circle-check"></i></button>
+    {% endif %}
+
 </form>
 
 <a href="{% url 'index' %}">back to main page</a>
