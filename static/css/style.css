@@ -601,7 +601,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: row;
-
+    padding: 10px;
 
 }
 
@@ -616,7 +616,11 @@ footer {
 
 .about-style {
     margin: 10px;
+}
 
+.about-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .card-img-top {
