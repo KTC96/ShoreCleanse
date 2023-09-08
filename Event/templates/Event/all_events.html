@@ -9,7 +9,7 @@
 		<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
 			<div class="card card-color h-100 border-0 mx-5 my-3">
 				<a href="{% url 'view_event' id=Event.id %}">
-					<img class="card-img-top img-fluid" src="#" alt="{{ Event.title }}">
+					<img class="card-img-top img-fluid" src="{{ Event.photo.url }}" alt="{{ Event.title }}">
 				<div class="card-body pb-0">
 					
 					<p class="mb-0">{{ Event.title }}</p>	
