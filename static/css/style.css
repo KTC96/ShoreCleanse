@@ -590,9 +590,57 @@ footer {
 }
 
 .about-section {
+    height: 100%;
     display: flex;
     justify-content: center;
+
+
 }
+
+.about-heading-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+.about-text {
+    color: #007ACC;
+}
+
+.about-card-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-style {
+    margin: 10px;
+}
+
+.about-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+}
+
+.about-heading-container2 {
+    height: 100vh;
+    background-image: url('../uploads/polluted-beach.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: center bottom;
+
+}
+
 
 
 
