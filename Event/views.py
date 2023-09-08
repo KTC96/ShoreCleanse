@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.views import generic
+import json
 
 from Event.models import Event
 
@@ -10,6 +11,9 @@ def all_events(request):
 
 def view_event(request, id):
     event = Event.objects.get(id=id)
+    print(event.names)
+    jsonData = event.names
+    jsonData["men"].append("qweqwe")
     if 'attending' in request.POST:
         event.attendees += 1
         event.save()
