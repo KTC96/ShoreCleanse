@@ -11,6 +11,11 @@ p {
     padding: 0;
 }
 
+.beach {
+    height: 100px;
+    width: 100px;
+}
+
 /* ------------------------------------Animations */
 
 .hidden {
