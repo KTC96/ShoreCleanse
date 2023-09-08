@@ -4,14 +4,14 @@
 </h1>
 
 
-![Summer of Code Banner](static/uploads/logo.png)
+![ShoreCleanse Mockup](static/uploads/mockup_screenshot.png)
 
 
 
 # SUBMISSION
 ## Deployment
-#### _(please note, your team must also include the deployed links in the usual submission in Hackapp)_
-The project is deployed and can be accessed at [http://your-deployed-link.com](http://your-deployed-link.com).
+#### _(Please note,  the deployed link is also included in the usual submission in Hackapp)_
+The project is deployed and can be accessed at [here](https://shore-cleanse-0fb5ac9c4936.herokuapp.com/).
 
 
 
