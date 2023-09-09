@@ -636,6 +636,11 @@ footer {
 
 }
 
+.contact-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
 /*-----------------------Events  */
 
 .event-style {
@@ -645,8 +650,6 @@ footer {
     height: 100vh;
 
 }
-
-
 
 .container-fluid {
     padding: 0px;
