@@ -2,35 +2,30 @@
 {% load static %}
 
 {% block content %}
-<h1>{{ event.title }}</h1>
 
-<img src='{{event.photo.url}}' alt="{{ event.title }}">
+<div class="container-fluid event-style ">
+    <h1 class=" event-title text-background-blue">{{ event.title }}</h1>
+    <img class="events-image" src="{{ event.photo.url }}" alt="{{ event.title }}">
+    <br>
+    <p>{{ event.notes }}</p>
+    <p>Location: {{ event.location }}</p>
+    <p>Attendees: {{ event.attendees }}</p>
+    <form class="text-center" action="" method="post">
+        {% csrf_token %}
 
-<p>{{ event.notes }}</p>
-
-<p>Location: {{ event.location }}</p>
-
-<p>Attendees: {{ event.attendees }}</p>
-
-<form action="" method="post">
-    {% csrf_token %}
-
-    <!-- Renders signup button on if the user is not signed up to the cleanup event
-    renders the unsibscribe button if the user wishes to remove themselves from the cleanup event 
-    passes 'attending' or 'not_attending' to the view -->
-
-    {% if signedUp %}
-    <h1>signed up, unsubscribe</h1>
-    <button type="submit" name="not_attending" style="border:none;background:none;">
-        <i class="fa-solid fa-xmark"></i></button>
-    {% else %}
-    <h1>not signed up, subscribe</h1>
-    <button type="submit" name="attending" style="border:none;background:none;">
-        <i class="fa-solid fa-circle-check"></i></button>
-    {% endif %}
-
-</form>
-
-<a href="{% url 'index' %}">back to main page</a>
+        {% if signedUp %}
+        <h1>Click the Icon to unregister</h1>
+        <button type="submit" name="not_attending" style="border: none; background: none;">
+            <i class="fa-solid fa-xmark fs-1"></i>
+        </button>
+        {% else %}
+        <h1>Click the Icon to register</h1>
+        <button type="submit" name="attending" style="border: none; background: none;">
+            <i class="fa-solid fa-circle-check fs-1"></i>
+        </button>
+        {% endif %}
+    </form>
+    <a href="{% url 'index' %}">Back to main page</a>
+</div>
 
 {% endblock %}
