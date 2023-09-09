@@ -9,7 +9,7 @@
       <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
         <div class="card card-color h-100 border-0">
           <a class="text-decoration-none text-center text-hover" href="{% url 'post_detail' post.pk %}">
-            <img class="card-img-top img-fluid img-size" src="{{ post.image.url }}" alt="{{ post.title }}">
+            <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
           <div class="card-body pb-0">
             
             <p class="mb-0">{{ post.title }}</p>	
