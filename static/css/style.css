@@ -174,16 +174,15 @@ body {
 }
 
 .mission-intro {
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 
 .mission-aims {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +201,7 @@ body {
 }
 
 .locations {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
