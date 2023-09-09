@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from Event.models import Event
 
 def index(request):
-    return render(request, 'index.html')
+    eventList = Event.objects.all()
+    return render(request, 'index.html', {'eventList': eventList})
 
 def about(request):
 	return render(request, 'about.html')
