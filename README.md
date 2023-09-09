@@ -72,16 +72,53 @@ Some of the most important factors of the project include:
 * API
 * Heroku
 
+## Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone our repository:
+
+- `git clone https://github.com/KTC96/ShoreCleanse`
+
+## Potential Future Features
+
+- In the future adding a feature for users to upload their individual trash collection would be beneficial for users to monitor and display their efforts.
+
+ - Adding some merchandise to an online store with a portion of the proceeds going towards the environmental efforts and utilizing a social media marketing campaign would help increase both the traffic to the site and funding for the environmental cause.
+
+
 ## Testing
+The testing was completed mainly through team members rigourously hard refreshing all pages in multiple browsers and devices, which allowed us to identify various bugs that needed addressing.
+To identify the source of bugs we used the following tools: 
+- Our eyes 
+- Developer Tools in various browsers (Console, Network, Lighthouse, Responsive Viewer) were used to check performance, responsiveness and SEOs.
+- [WAVE - Web Accessibility Evaluation Tools](https://wave.webaim.org/) was used to assess accessibility.
+
+- Through running these tests, we noticed that our accessibility and performance scores were a little lower than we would like. Given more time and with our next release, we will address these issues by possibly changing our images from jpg and png to WebP image files and adding more descriptive text to all visual aspects of the site.
+
+The site was tested on the following browsers: 
+- Firefox
+- Chrome
+- Safari
+- Edge
 
 ## Bugs and fixing
+* When trying to make images in the gallery uniform, a duplicated class threw off the images in the footer  
+
+
+  * To fix it we first checked if we had entered into a portal and landed on a planet with more gravity, but then finally realized we just needed to rename a class in the gallery and apply the edits there. 
+    ![ShoreCleanse Mockup](static/uploads/footererror.png)
+
+
+* We had issues while trying to edit our code - when trying to preview our changes error screens were showing. We figured out it wasbecause the Django servers were overloaded with multiple people accessing it at once.  
+
+* Several design issues were encountered, at the beginning we had a couple of developers working on the same section, and realized our edits were over riding each other. As the hours progressed in the project and more caffeine was injected, we had a much tighter ship running and everything was controlled and synced.
 
 ## Programs Used
 
 ### Version Control
 
 * [Github](https://github.com/) used to host repository.
-* [Github pages](https://pages.github.com/) used to deploy the website.
+* [Heroku](https://www.heroku.com/) used to deploy the website.
 ### Code Editors
 * [VScode](https://code.visualstudio.com/) is  free and open-source code editor and customizable tool for writing code.
 ### Communications
@@ -108,9 +145,9 @@ Some of the most important factors of the project include:
   Scrum Master/ Frontend / Documentation
   - **Andrew Dempsey** - [GitHub](https://github.com/andrewdempsey2018), [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/)
   Backend/ Frontend / Documentation
-  - **Rinalds Zimelis** - [GitHub](https://github.com/rinalds98), [LinkedIn](https://www.linkedin.com)
+  - **Rinalds Zimelis** - [GitHub](https://github.com/rinalds98), [LinkedIn](https://www.linkedin.com/in/rinalds-zimelis/)
   Backend/Design/ Frontend / Documentation
-  - **Ayla McCarthy** - [GitHub](https://github.com/Aylamccarthy), [LinkedIn](https://www.linkedin.com)
+  - **Ayla McCarthy** - [GitHub](https://github.com/Aylamccarthy), [LinkedIn](https://www.linkedin.com/in/ayla-mccarthy-a666565/)
    Design/ Frontend / Documentation
-  - **Kim Hanlon** - [GitHub](https://github.com/kimatron), [LinkedIn](https://www.linkedin.com/in/)
+  - **Kim Hanlon** - [GitHub](https://github.com/kimatron), [LinkedIn](https://www.linkedin.com/in/kimhanlon291354)
    Design/ Frontend / Documentation
