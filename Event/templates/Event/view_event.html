@@ -3,16 +3,17 @@
 
 {% block content %}
 
-<div class="container-fluid event-style">
-    <h1 class=" event-title text-background-blue text-center">{{ event.title }}</h1>
-    <img class="events-image" src="{{ event.photo.url }}" alt="{{ event.title }}">
+<div class="container-fluid event text-center">
+    <h1 class="text-center">{{ event.title }}</h1>
+    <br>
+    <img src="{{ event.photo.url }}" alt="{{ event.title }}">
     <br>
     <p>{{ event.notes }}</p>
     <p>Location: {{ event.location }}</p>
     <p>Attendees: {{ event.attendees }}</p>
 
     {% if username == 'guest' %}
-    <h1>Guest</h1>
+    <h1>Please sign in to register for events</h1>
     {% else %}
     <form class="text-center" action="" method="post">
         {% csrf_token %}
@@ -30,8 +31,13 @@
         {% endif %}
     </form>
     {% endif %}
+    <br>
+    <a class="btn btn-lg btn--cta btn-join" href="{% url 'all_events' %}">Back to All Events
 
-    <a href="{% url 'index' %}">Back to main page</a>
+    </a>
+
+    <br>
+    <br>
 
 </div>
 
