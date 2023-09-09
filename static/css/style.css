@@ -617,11 +617,13 @@ footer {
     padding-bottom: 25px;
 }
 
-.card-img-top {
+.card-img {
     object-fit: cover;
-    height: 250px;
+    max-height: 100%;
     width: 100%;
 }
+
+
 
 .about-heading-container2 {
     height: 100vh;
