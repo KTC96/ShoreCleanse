@@ -1,14 +1,50 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
-<h1>All Events</h1>
+<h1 class="text-center">All Events</h1>
+<div class="row d-flex justify-content-around container-fluid my-5 mx-0">
+	{% for Event in eventList %}
+	<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+		<div class="card card-color h-100 border-0">
+			<a class="text-decoration-none text-center text-hover" href="{% url 'view_event' id=Event.id %}">
+				<img class="card-img-top img-fluid" src="{{ Event.photo.url }}" alt="{{ Event.title }}">
+				<div class="card-body pb-0">
 
-{% for Event in eventList %}
-<p>
-	<a href="{% url 'view_event' id=Event.id %}">{{ Event.title }}</a>
-</p>
-{% endfor %}
+					<p class="mb-0">{{ Event.title }}</p>
+				</div>
+				<div class="card-footer bg-white pt-0 border-0 text-left">
+					<div class="row">
+						<div class="col">
+							<p class="mb-0"><i class="fas fa-map-marker-alt"></i> {{ Event.location }}</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	{% if forloop.counter|divisibleby:1 %}
+	<div class="col-12 d-sm-none mb-5">
+		<hr>
+	</div>
+	{% endif %}
+	{% if forloop.counter|divisibleby:2 %}
+	<div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+		<hr>
+	</div>
+	{% endif %}
+	{% if forloop.counter|divisibleby:3 %}
+	<div class="col-12 d-none d-lg-block d-xl-none mb-5">
+		<hr>
+	</div>
+	{% endif %}
+	{% if forloop.counter|divisibleby:4 %}
+	<div class="col-12 d-none d-xl-block mb-5">
+		<hr>
+	</div>
+	{% endif %}
+	{% endfor %}
+</div>
+
 
 {% endblock %}
-

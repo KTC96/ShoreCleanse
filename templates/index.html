@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 <!-- Main heading -->
 <div class="container-fluid main-heading-container">
-    <div class="row">
+    <div class="row g-0">
         <div class="col-12">
             <section class="callout jumbotron text-center">
                 <div class="text-background-blue">
                     <h1 class="jumbotron-header">
-                        Make Waves for a Cleaner coast!
+                        Make Waves for a Cleaner Coast!
                     </h1>
                     <hr class="block-divider" />
-                    <p class="lead">
-                        Last month our users collected enough rubbish to pave <strong>0.5 miles</strong> of sustainable
+                    <p>
+                        Last month our users collected enough rubbish to pave <strong>{{ road }}Km</strong> of sustainable
                         roads.
                     </p>
                 </div>
@@ -25,89 +25,88 @@
 <!-- Mission statement -->
 <div class="bg-color-gradient">
     <section class="mission">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
         <div class="container mission-container content-container">
             <div class="row">
                 <div class="col-12 page-header text-center">
-                    <h2 class="mission-heading"><i class="fa-solid fa-earth-europe"></i> Mission Statement</h2>
-                    <hr class="block-divider block-divider--short" />
-                    <p class="main-mission-statement">
-                        At ShoreCleanse, our mission is to unite communities and individuals in the shared goal of
-                        preserving our precious coastal environments. We provide a user-friendly platform that
-                        simplifies and enhances the process of organizing and participating in beach cleanups.
-
-                        Through ShoreCleanse, we aim to create cleaner, healthier coastlines, instilling a deep sense
-                        of
-                        stewardship for these vital natural resources. Join us in making a lasting impact on our
-                        beaches
-                        and oceans for the benefit of current and future generations.
-                    </p>
-                    <hr class="block-divider">
-                    <h3 class="aims-subheading"><u>Facilitate Cleanup Coordination</u></h3>
-                    <p>
-                        Facilitate Cleanup Coordination: We empower organizers to plan and manage beach cleanup
-                        events
-                        efficiently, from scheduling to supply coordination, ensuring smoother and more impactful
-                        efforts.
-
-
-                    </p>
-                    <h3 class="aims-subheading"><u>Engage Volunteers</u></h3>
-                    <p>
-                        We connect passionate individuals with opportunities to participate in
-                        beach
-                        cleanups, fostering a sense of responsibility and community involvement.
-                    </p>
-                    <h3 class="aims-subheading"><u>Raise Environmental Awareness</u></h3>
-                    <p>
-                        ShoreCleanse seeks to educate participants about the
-                        importance of coastal ecosystems and the broader environmental impact of their actions.
-
-                    </p>
-                    <p class="main-mission-statement">
-
-                    </p>
+                    <div>
+                        <h2 class="mission-heading hidden mission-animation"><i class="fa-solid fa-earth-europe"></i>
+                            Statistics</h2>
+                        <hr class="block-divider hidden mission-animation" />
+                        <p class="main-mission-statement hidden mission-animation">
+                            So far we have had {{ total }} people attend our Beach clean up events!
+                            In total we have collected {{ trash_collected }}kg of trash from our beaches.
+                        </p>
+                    </div>
+                    <div class="row about-section mission-intro">
+                        <div class="col-sm-12 col-lg-12 my-5">
+                
+                            <div class="card about-text hidden mission-animation">
+                                <div class="card-body text-center">
+                                    <h2 class="card-title"><i class="fa-solid fa-earth-europe"></i>Mission Statement</h2>
+                                    <p class="card-text">                            
+                                        At ShoreCleanse, our mission is to unite communities and individuals in the shared goal of
+                                        preserving our precious coastal environments. We provide a user-friendly platform that
+                                        simplifies and enhances the process of organizing and participating in beach cleanups.
+            
+                                        Through ShoreCleanse, we aim to create cleaner, healthier coastlines, instilling a deep
+                                        sense
+                                        of
+                                        stewardship for these vital natural resources. Join us in making a lasting impact on our
+                                        beaches
+                                        and oceans for the benefit of current and future generations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="locations hidden">
+        <div class="col-12 page-header">
+            <h2 class="text-center locations-heading hidden"> <i class="fa-solid fa-location-dot"></i>
+                Upcoming Events</h2>
+            <div class="container text-center my-3">
+                <div class="row mx-auto my-auto justify-content-center">
+                    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            {% for Event in eventList %}
+                            {% if forloop.counter == 1 %}
+                            <div class="carousel-item active">
+                                {% else %}
+                                <div class="carousel-item">
+                                    {% endif %}
+                                    <div class="col-md-3">
+                                        <a href="{% url 'view_event' id=Event.id %}">
+                                            <div class="card  rounded-3">
+                                                <div class="opaque-overlay rounded-3"></div>
+                                                <div class="card-img">
+                                                    <img src="{{ Event.photo.url }}" class="img-fluid rounded-3">
+                                                </div>
+                                                <div class="card-img-overlay bold-text">{{ Event.title }}</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </div>
 
-    <!-- Locations -->
-    <section class=" locations">
-        <div class="container locations-container content-container">
-            <div class="row">
-                <div class="col-12 page-header">
-                    <h2 class="text-center locations-heading"> <i class="fa-solid fa-location-dot"></i>
-                        Locations</h2>
-                    <hr />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="/view_event/6">
-                        <div class="location location-1 rounded-3">
-                            <h3 class="bold-text">Bray</h3>
-                            <div class="opaque-overlay rounded-3"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="/view_event/7">
-                        <div class="location location-2 rounded-3">
-                            <h3 class="bold-text">Strand</h3>
-                            <div class="opaque-overlay rounded-3"></div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <div class="location location-3 rounded-3">
-                            <h3 class="bold-text">Location 3</h3>
-                            <div class="opaque-overlay rounded-3"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
     </section>
-</div>
-{% endblock %}
+    {% endblock %}

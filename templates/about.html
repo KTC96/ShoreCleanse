@@ -1,9 +1,177 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<h1>About Shore Cleanse</h1>
+<div class="container-fluid about-heading-container">
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <div class="text-background-blue">
+                    <h1 class="jumbotron-header">About Us</h1>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
 
-<p>Here is some information Shore Cleanse</p>
+<div class="about-heading-2">
+    <h1 class="mb-4 about-style">ShoreCleanse</h1>
+
+    <a href="{% url 'index' %}"><img class="logo about-style" src="{% static 'uploads/logo.png' %}"></a>
+</div>
+
+<div class="container">
+    <div class="row about-section">
+        <div class="col-sm-12 col-lg-12 my-5">
+
+            <div class="card about-text">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Welcome</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Thank you for visiting ShoreCleanse!</h6>
+                    <p class="card-text">We are dedicated to making a positive impact on our environment by cleaning up
+                        and preserving the beauty of our beaches. Our passionate team of volunteers works tirelessly to
+                        ensure that our coastlines remain clean, safe, and beautiful for everyone to enjoy.</p>
+                </div>
+            </div>
+            <br>
+            <h4 class="text-center about-headings">Our Aims</h4>
+            <hr class="block-divider" />
+            <br>
+
+            <div class="about-card-horizontal row">
+                <div class="col-md-4 d-flex">
+                    <div class="card about-text flex-fill">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Beach Cleanups</h6>
+                            <p class="card-text">We organize regular beach cleanup events where volunteers come together
+                                to collect litter, plastics, and debris from our shorelines. These cleanups help prevent
+                                harm to marine life and maintain the scenic beauty of our beaches.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card about-text flex-fill">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Education and Awareness</h6>
+                            <p class="card-text">We are committed to raising awareness about the importance of
+                                preserving our coastal ecosystems. Through workshops, seminars, and educational
+                                programs, we empower individuals to become stewards of our oceans.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex">
+                    <div class="card about-text flex-fill">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Advocacy</h6>
+                            <p class="card-text">We actively engage with local authorities, businesses, and communities
+                                to promote responsible waste disposal and sustainable practices. We advocate for
+                                policies that protect our coastlines and marine habitats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="container-fluid about-heading-container2">
+        <div class="row">
+            <div class="col-12">
+                <section class="callout jumbotron text-center">
+                    <div class="text-background-blue">
+                        <h1 class="jumbotron-header">
+                            Beach pollution persists, but we're making a difference. Join our ongoing efforts for a
+                            cleaner, safer beach. Together, we safeguard our natural beauty for future generations.
+                        </h1>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row about-section">
+        <div class="col-sm-12 col-lg-12 my-5">
+
+            <div class="about-card-horizontal row">
+                <h4 class="text-center about-padding">Why Join Us?</h4>
+                <hr class="block-divider" />
+
+                <div class="about-card-horizontal row">
+
+                    <div class="col-md-4 d-flex">
+                        <div class="card about-text text-center flex-fill">
+                            <div class="card-body">
+                                <h5 class="card-title">Community Involvement</h5>
+                                <p class="card-text">We believe that positive change starts at the community level. By
+                                    joining our group, you become part of a community of like-minded individuals working
+                                    towards a common goal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="card about-text text-center flex-fill">
+                            <div class="card-body">
+                                <h5 class="card-title">Passion for the Environment</h5>
+                                <p class="card-text">We are driven by a deep love for the ocean and a desire to protect
+                                    it.
+                                    Our volunteers are dedicated to making a difference. If you're passionate about
+                                    preserving our environment and want to be part of our beach cleanup efforts, don't
+                                    hesitate to reach out. Together, we can make a significant impact and continue to
+                                    cherish the beauty of our coastline.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex">
+                        <div class="card about-text text-center flex-fill">
+                            <div class="card-body">
+                                <h5 class="card-title">Impact</h5>
+                                <p class="card-text">Our efforts have a direct and tangible impact on the environment.
+                                    You
+                                    can see the results of your hard work during our beach cleanups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <h4 class="text-center about-padding">Next Steps</h4>
+                <hr class="block-divider" />
+
+                <div class="card about-text">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Get Involved</h5>
+                        <p class="card-text">Join us in our mission to keep our beaches clean and protect our coastal
+                            ecosystems. Whether you're an experienced environmentalist or new to beach cleanups, there's
+                            a
+                            place for you in ShoreCleanse. Together, we can make a difference.</p>
+                    </div>
+                </div>
+
+
+                <div class="card about-text">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Contact Us</h5>
+                        <p class="card-text">Thank you for visiting us. And we hope you can join us soon! Together, we
+                            can
+                            create a greener, cleaner, and more beautiful tomorrow. Have questions or want to get
+                            involved?
+                            Feel free to reach out to us at <a class="nav-link"
+                                href="{% url 'contact' %}"><strong>ShoreCleanse</strong></a>. We'd love to hear from
+                            you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 {% endblock %}
