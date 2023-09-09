@@ -4,23 +4,27 @@
 
 <div class="bg-color">
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-lg-6 my-5">
-            <h1 class="mb-4">Location & Contact Details</h1>
-            <p>            
-                We hope you can join us soon!
-            </p>
-            <br>
-            <h4>You can find us on:</h4><br>
-            <p><strong>Address:</strong> 123 grafton street, Dublin 1</p>
-            <p><strong>Phone:</strong> 01 123 4567</p>
-            <p><strong>Email:</strong> shorecleanse@email.com</p>
-            <p>Or make sure to check out our  
-                <a class="nav-item nav-link" href="{% url 'all_events' %}"><strong>Events</strong></a></p></div>
-        <div class="col-sm-12 col-lg-6 my-5">                
-            <div id="gmp-map"></div>
-    </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 my-5">
+                <h1 class="mb-4">Location & Contact Details</h1>
+                <p>
+                    We hope you can join us soon!
+                </p>
+                <br>
+                <h4>You can find us on:</h4><br>
+                <p><strong>Address:</strong> 27 Grafton Street, Dublin 1</p>
+                <p><strong>Phone:</strong> 01 623 7341</p>
+                <p><strong>Email:</strong> shorecleanse@email.com</p>
+                <p>Or make sure to check out our
+                    <a class="nav-item nav-link" href="{% url 'all_events' %}"><strong>Events</strong></a>
+                </p>
+            </div>
+            <div class="col-sm-12 col-lg-6 my-5">
+                <div class="row mx-auto">
+                    <div id="gmp-map"></div>
+                </div>
+            </div>
+        </div>
 
-{% endblock %}
+        {% endblock %}

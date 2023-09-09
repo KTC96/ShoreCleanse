@@ -174,16 +174,15 @@ body {
 }
 
 .mission-intro {
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 
 .mission-aims {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +201,7 @@ body {
 }
 
 .locations {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,10 +256,12 @@ body {
 .card-color {
     color: black
 }
+
 .text-hover:hover {
     color: #007ACC;
     font-weight: bold;
 }
+
 /* ------------------------------------Footer */
 
 
@@ -507,16 +508,6 @@ footer {
     width: 100%;
 }
 
-.blog-heading-container {
-    height: 100vh;
-    background-image: url('../uploads/beach_cleanup.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
 
 .btn-join {
     background-color: white;
@@ -649,6 +640,40 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+
+/*-----------------------Events  */
+
+.event-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.fs-1 {
+    color: white;
+    padding: 10px;
+}
+
+.event-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -689,4 +714,9 @@ footer {
     .copyright {
         display: contents;
     }
+}
+
+.img-gallery {
+    max-width: 100%;
+    height: 100%;
 }

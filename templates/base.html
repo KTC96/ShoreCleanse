@@ -32,13 +32,13 @@
             justify-content: center;
             position: relative;
         }
-        </style>
+    </style>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container-fluid bg-color">
+        <div class="container-fluid bg-color px-5">
             <a class="navbar-brand" href="{% url 'index' %}"><img class="logo"
                     src="{% static 'uploads/logo.png' %}"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -67,18 +67,6 @@
                         <a class="nav-link {% if request.path == '/gallery' %}active{% endif %}"
                             href="{% url 'gallery' %}">Gallery</a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Locations
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/view_event/6">Bray</a></li>
-                            <li><a class="dropdown-item" href="/view_event/7">Strand</a></li>
-                            <li><a class="dropdown-item" href="#">Donabate</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}"
                             href="{% url 'contact' %}">Contact</a>
@@ -96,8 +84,11 @@
                     {% endif %}
                 </ul>
             </div>
-            <p class="user-name"><strong>Hello Donkey{{ request.user.username }}</strong></p>
-            <img class="beach" src="{% static 'uploads/beach.png'%}">
+            {% if request.user.is_authenticated %}
+            <p class="user-name"><strong>Hello {{ request.user.username }}</strong></p>
+            {% else %}
+            <p class="user-name"><strong>Hello Guest!</strong></p>
+            {% endif %}
         </div>
     </nav>
 
@@ -109,7 +100,7 @@
     {% endblock %}
 
     <footer class="container-fluid bg-color">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-sm-12">
                 <div class="developer-and-address-container">
                     <a href="{% url 'index' %}"><img class="logo logo-footer" src="{% static 'uploads/logo.png' %}"></a>
@@ -117,7 +108,7 @@
                     <div class="address">
                         <h5>Address</h5>
                         <p>
-                            123 Grafton Street<br>
+                            27 Grafton Street<br>
                             Dublin 1<br>
                             Ireland<br>
                         </p>

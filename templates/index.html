@@ -3,7 +3,7 @@
 {% block content %}
 <!-- Main heading -->
 <div class="container-fluid main-heading-container">
-    <div class="row">
+    <div class="row g-0">
         <div class="col-12">
             <section class="callout jumbotron text-center">
                 <div class="text-background-blue">
@@ -11,8 +11,8 @@
                         Make Waves for a Cleaner Coast!
                     </h1>
                     <hr class="block-divider" />
-                    <p class="lead">
-                        Last month our users collected enough rubbish to pave <strong>0.5 miles</strong> of sustainable
+                    <p>
+                        Last month our users collected enough rubbish to pave <strong>{{ road }}Km</strong> of sustainable
                         roads.
                     </p>
                 </div>
@@ -25,162 +25,88 @@
 <!-- Mission statement -->
 <div class="bg-color-gradient">
     <section class="mission">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
         <div class="container mission-container content-container">
             <div class="row">
                 <div class="col-12 page-header text-center">
-                    <div class="mission-intro">
+                    <div>
                         <h2 class="mission-heading hidden mission-animation"><i class="fa-solid fa-earth-europe"></i>
-                            Mission Statement</h2>
+                            Statistics</h2>
                         <hr class="block-divider hidden mission-animation" />
                         <p class="main-mission-statement hidden mission-animation">
-                            At ShoreCleanse, our mission is to unite communities and individuals in the shared goal of
-                            preserving our precious coastal environments. We provide a user-friendly platform that
-                            simplifies and enhances the process of organizing and participating in beach cleanups.
-
-                            Through ShoreCleanse, we aim to create cleaner, healthier coastlines, instilling a deep
-                            sense
-                            of
-                            stewardship for these vital natural resources. Join us in making a lasting impact on our
-                            beaches
-                            and oceans for the benefit of current and future generations.
+                            So far we have had {{ total }} people attend our Beach clean up events!
+                            In total we have collected {{ trash_collected }}kg of trash from our beaches.
                         </p>
                     </div>
-                    <div class="mission-aims">
-                        <h2 class="mission-heading hidden"><i class="fa-solid fa-earth-europe"></i> Our Aims</h2>
-                        <hr class="block-divider hidden">
-                        <h3 class="aims-subheading hidden cleanup-animation"><u>Facilitate Cleanup Coordination</u></h3>
-                        <p class="hidden cleanup-animation">
-                            We empower organizers to plan and manage beach cleanup
-                            events
-                            efficiently, from scheduling to supply coordination, ensuring smoother and more impactful
-                            efforts.
-
-
-                        </p>
-                        <h3 class="aims-subheading hidden volunteers-animation"><u>Engage Volunteers</u></h3>
-                        <p class="hidden volunteers-animation">
-                            We connect passionate individuals with opportunities to participate in
-                            beach
-                            cleanups, fostering a sense of responsibility and community involvement.
-                        </p>
-                        <h3 class="aims-subheading hidden awareness-animation"><u>Raise Environmental Awareness</u></h3>
-                        <p class="hidden awareness-animation">
-                            ShoreCleanse seeks to educate participants about the
-                            importance of coastal ecosystems and the broader environmental impact of their actions.
-
-                        </p>
-
+                    <div class="row about-section mission-intro">
+                        <div class="col-sm-12 col-lg-12 my-5">
+                
+                            <div class="card about-text hidden mission-animation">
+                                <div class="card-body text-center">
+                                    <h2 class="card-title"><i class="fa-solid fa-earth-europe"></i>Mission Statement</h2>
+                                    <p class="card-text">                            
+                                        At ShoreCleanse, our mission is to unite communities and individuals in the shared goal of
+                                        preserving our precious coastal environments. We provide a user-friendly platform that
+                                        simplifies and enhances the process of organizing and participating in beach cleanups.
+            
+                                        Through ShoreCleanse, we aim to create cleaner, healthier coastlines, instilling a deep
+                                        sense
+                                        of
+                                        stewardship for these vital natural resources. Join us in making a lasting impact on our
+                                        beaches
+                                        and oceans for the benefit of current and future generations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="locations">
+    <section class="locations hidden">
         <div class="col-12 page-header">
             <h2 class="text-center locations-heading hidden"> <i class="fa-solid fa-location-dot"></i>
-                Locations</h2>
+                Upcoming Events</h2>
             <div class="container text-center my-3">
                 <div class="row mx-auto my-auto justify-content-center">
                     <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner" role="listbox">
+                            {% for Event in eventList %}
+                            {% if forloop.counter == 1 %}
                             <div class="carousel-item active">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card  rounded-3">
-
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="{% static 'uploads/bray.png' %}" class="img-fluid  rounded-3">
+                                {% else %}
+                                <div class="carousel-item">
+                                    {% endif %}
+                                    <div class="col-md-3">
+                                        <a href="{% url 'view_event' id=Event.id %}">
+                                            <div class="card  rounded-3">
+                                                <div class="opaque-overlay rounded-3"></div>
+                                                <div class="card-img">
+                                                    <img src="{{ Event.photo.url }}" class="img-fluid rounded-3">
+                                                </div>
+                                                <div class="card-img-overlay bold-text">{{ Event.title }}</div>
                                             </div>
-                                            <div class="card-img-overlay bold-text">Bray</div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
+                                {% endfor %}
                             </div>
-                            <div class="carousel-item">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card  rounded-3">
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="{% static 'uploads/strand.png' %}"
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="card-img-overlay bold-text">Strand</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card  rounded-3">
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="{% static 'uploads/location3.jpg' %}"
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="card-img-overlay bold-text">Slide 3</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card  rounded-3">
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="//via.placeholder.com/500x400?text=4"
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="card-img-overlay bold-text">Slide 4</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card rounded-3">
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="//via.placeholder.com/500x400/aba?text=5"
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="card-img-overlay bold-text">Slide 5</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="col-md-3">
-                                    <a href="#">
-                                        <div class="card  rounded-3">
-                                            <div class="opaque-overlay rounded-3"></div>
-                                            <div class="card-img">
-                                                <img src="//via.placeholder.com/500x400/fc0?text=6"
-                                                    class="img-fluid rounded-3">
-                                            </div>
-                                            <div class="card-img-overlay bold-text">Slide 6</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </a>
+                            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </a>
                         </div>
-                        <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
                     </div>
-                </div>
 
-            </div>
+                </div>
     </section>
     {% endblock %}
