@@ -2,30 +2,179 @@
 {% load static %}
 {% block content %}
 
-
-
 <div class="bg-color">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-lg-6 my-5">
-                <h1 class="mb-4">Location & Contact Details</h1>
-                <p>            
-                    We hope you can join us soon!
-                </p>
-                <br>
-                <h4>You can find us on:</h4><br>
-                <p><strong>Address:</strong> 123 grafton street, Dublin 1</p>
-                <p><strong>Phone:</strong> 01 123 4567</p>
-                <p><strong>Email:</strong> shorecleanse@email.com</p>
-                <p>Or make sure to check out our  
-                    <a class="nav-item nav-link" href="{% url 'all_events' %}"><strong>Events</strong></a></p></div>
-            <div class="col-sm-12 col-lg-6 my-5">                
-                <div id="gmp-map"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 my-5">
+            <h1 class="mb-4">Gallery</h1>
+            <h3> See us in action!</h3>
         </div>
+        <!--Grid column--><!-- Testing for gallery page --> 
+<!--Grid row-->
+<div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        src="{% static 'uploads/beach_cleanup.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
     </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="300"
+        src="{% static 'uploads/beachclean1.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="500"
+        src="{% static 'uploads/beachclean2.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+  <!--Grid row-->
+<div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        src="{% static 'uploads/beachclean3.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="300"
+        src="{% static 'uploads/beachclean4.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="500"
+        src="{% static 'uploads/beachclean5.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+  <!--Grid row-->
+<div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        src="{% static 'uploads/beachclean6.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="300"
+        src="{% static 'uploads/beachclean7.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="500"
+        src="{% static 'uploads/beachclean8.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+  
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        src="{% static 'uploads/carnivan2.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="300"
+        src="{% static 'uploads/carnivan1.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
+  
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-6 mb-4">
+      <img
+        data-mdb-toggle="animation"
+        data-mdb-animation-start="onScroll"
+        data-mdb-animation="fade-in"
+        data-mdb-animation-delay="500"
+        src="{% static 'uploads/duncannon2.jpg'%}"
+        class="img-fluid shadow-1-strong rounded"
+      />
+    </div>
+    <!--Grid column-->
 
-
-
+</div>
 
 {% endblock %}
