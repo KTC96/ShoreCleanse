@@ -14,6 +14,9 @@ def view_event(request, id):
 
     username = request.user.username
 
+    if len(username) == 0:
+        username = 'guest'
+        
     attendeeList = event.names
 
 
@@ -43,4 +46,4 @@ def view_event(request, id):
     else:
         signedUp = False
 
-    return render(request, 'Event/view_event.html', {'event': event, 'signedUp': signedUp})
+    return render(request, 'Event/view_event.html', {'event': event, 'signedUp': signedUp, 'username': username})

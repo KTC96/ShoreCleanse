@@ -10,6 +10,10 @@
     <p>{{ event.notes }}</p>
     <p>Location: {{ event.location }}</p>
     <p>Attendees: {{ event.attendees }}</p>
+
+    {% if username == 'guest' %}
+    <h1>Guest</h1>
+    {% else %}
     <form class="text-center" action="" method="post">
         {% csrf_token %}
 
@@ -25,7 +29,10 @@
         </button>
         {% endif %}
     </form>
+    {% endif %}
+
     <a href="{% url 'index' %}">Back to main page</a>
+
 </div>
 
 {% endblock %}
