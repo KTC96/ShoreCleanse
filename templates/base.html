@@ -84,8 +84,11 @@
                     {% endif %}
                 </ul>
             </div>
-            <p class="user-name"><strong>Hello Donkey{{ request.user.username }}</strong></p>
-            <img class="beach" src="{% static 'uploads/beach.png'%}">
+            {% if request.user.is_authenticated %}
+            <p class="user-name"><strong>Hello {{ request.user.username }}</strong></p>
+            {% else %}
+            <p class="user-name"><strong>Hello Guest!</strong></p>
+            {% endif %}
         </div>
     </nav>
 
