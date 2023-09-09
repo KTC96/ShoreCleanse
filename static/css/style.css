@@ -1,6 +1,7 @@
 /* ------------------------------------Global */
 p {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 20px;
 }
 
 .logo {
@@ -8,6 +9,11 @@ p {
     width: 60px;
     margin: 0;
     padding: 0;
+}
+
+.beach {
+    height: 100px;
+    width: 100px;
 }
 
 /* ------------------------------------Animations */
@@ -26,16 +32,44 @@ p {
     transform: translateX(0);
 }
 
-.location-animation:nth-child(1) {
+.mission-animation:nth-child(3) {
     transition-delay: 200ms;
 }
 
-.location-animation:nth-child(2) {
-    transition-delay: 400ms;
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
 }
 
-.location-animation:nth-child(3) {
-    transition-delay: 600ms;
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
 }
 
 
@@ -108,7 +142,17 @@ body {
     --bs-dropdown-padding-y: 0rem;
 }
 
+/* ------------------------------------Navbar */
+.user-name {
+    margin: 0;
+}
+
+.active {
+    color: black;
+}
+
 /* ------------------------------------Mission statement */
+
 
 .mission-container {
     font-size: 18px;
@@ -121,7 +165,7 @@ body {
 
 .aims-subheading {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 10px;
 }
 
 .main-mission-statement {
@@ -129,38 +173,53 @@ body {
     font-weight: 900;
 }
 
+.mission-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.mission-aims {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mission-aims>p {
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+.mission-heading {
+    margin-top: 100px;
+}
+
+.locations {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ------------------------------------Locations */
 
-.location-1 {
-    background-image: url('../uploads/bray.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.location-2 {
-    background-image: url('../uploads/strand.png');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.location-3 {
-    background-image: url('../uploads/location3.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 40px;
-}
 
 .locations a {
     text-decoration: none;
@@ -185,7 +244,7 @@ body {
     transition: opacity 0.5s;
 }
 
-.col-md-4:hover .opaque-overlay {
+.col-md-3:hover .opaque-overlay {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -194,6 +253,15 @@ body {
     font-weight: 900;
 }
 
+/* ------------------------------------Events Page & Blog page */
+.card-color {
+    color: black
+}
+
+.text-hover:hover {
+    color: #007ACC;
+    font-weight: bold;
+}
 
 /* ------------------------------------Footer */
 
@@ -419,6 +487,200 @@ footer {
     border-color: rgb(100, 98, 98);
 }
 
+/*-----------------------Blog page  */
+.blog-post-background {
+    background-color: #007ACC;
+}
+
+.blog-format {
+    padding: 50px;
+}
+
+.blog-page {
+    padding: 50px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    width: 100%;
+}
+
+
+.btn-join {
+    background-color: white;
+    border-color: white;
+    --bs-btn-hover-border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007ACC;
+}
+
+.btn-submit {
+    background-color: #007ACC;
+    border-color: white;
+    --bs-btn-hover-border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+
+.blog-email {
+    color: #007ACC;
+    margin-top: 10px;
+}
+
+.blog-profile-image {
+    padding-top: 15px;
+}
+
+
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.text-box {
+    padding: 10px;
+}
+
+/*-----------------------Log in page  */
+
+
+
+.log-in-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../uploads/login-beach.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.log-in h1 {
+    padding: 50px;
+}
+
+/*-----------------------About us  */
+
+.about-heading-container {
+    height: 100vh;
+    background-image: url('../uploads/aboutus-image.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.about-heading-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+.about-text {
+    color: #007ACC;
+}
+
+.about-card-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-style {
+    margin: 10px;
+}
+
+.about-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.about-heading-container2 {
+    height: 100vh;
+    background-image: url('../uploads/polluted-beach.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-position: center bottom;
+
+}
+
+/*-----------------------Events  */
+
+.event-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.events-image {
+    height: 500px;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.fs-1 {
+    color: white;
+    padding: 10px;
+}
+
+.event-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+
+}
+
+
+
+
+/* ---------- Google Maps---------------*/
+#gmp-map {
+    height: 500px;
+    width: 500px;
+}
+
+
 /* --------------------------------------------------- SMALL DEVICES------------------------------------------------------------------*/
 @media (max-width: 768px) {
 
@@ -447,4 +709,9 @@ footer {
     .copyright {
         display: contents;
     }
+}
+
+.img-gallery{
+    max-width:100%;
+    height:100%;
 }
